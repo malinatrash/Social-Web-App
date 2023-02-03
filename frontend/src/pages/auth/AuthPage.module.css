@@ -1,0 +1,33 @@
+.form {
+    padding: 50px;
+    background-color: whitesmoke;
+    border-radius: 60px;
+    width: 350px;
+    height: 450px;
+    margin: 30px 15px 50px;
+
+}
+
+.root {
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #007AFF;
+    justify-content: center;
+}
+
+.input {
+    height: initial;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 35px;
+    padding: 30px;
+    text-align: center;
+}
+
+.loginButton {
+    display: flex;
+}

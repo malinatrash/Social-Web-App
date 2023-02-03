@@ -1,17 +1,20 @@
-.navbar  {
+.navbar {
     justify-content: space-between;
     align-items: center;
     display: flex;
-    background-color: #05736B;
+    background-color: #007AFF;
     width: 100%;
 }
+
 .avatar-wrapper {
     display: flex;
 }
+
 .avatar {
     margin: 10px;
     border: 2px solid black;
 }
+
 .username {
     font-size: 35px;
     font-weight: bold;
@@ -19,6 +22,7 @@
 }
 
 .toListButton {
-    font-weight: lighter;
-    right: 100px;
+    font-weight: bold;
+    right: 15px;
+    border: 3px solid white;
 }
