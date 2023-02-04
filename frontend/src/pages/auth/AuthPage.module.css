@@ -32,6 +32,8 @@
 .input {
     height: initial;
     margin-bottom: 20px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .title {
@@ -67,4 +69,6 @@
     justify-content: space-between;
     padding-bottom: 50px;
 }
+
+
 

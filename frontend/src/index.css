@@ -6,13 +6,8 @@
     background-color: #f1f3f4;
 }
 
-body {
-    height: 100%;
-}
-
 html {
     box-sizing: border-box;
-    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -21,7 +16,6 @@ html {
 *,
 *::before,
 *::after {
-    height: auto;
     margin: 0;
     padding: 0;
 }
