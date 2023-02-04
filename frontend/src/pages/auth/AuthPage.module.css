@@ -1,20 +1,32 @@
 .form {
     padding: 50px;
     background-color: whitesmoke;
-    border-radius: 60px;
-    width: 350px;
-    height: 450px;
-    margin: 30px 15px 50px;
+    border-radius: 30px;
+    width: 450px;
+    height: 550px;
+    max-height: 450px;
+}
 
+@media (max-width: 800px) {
+    .form {
+        width: 66vw;
+        height: 70vh;
+    }
 }
 
 .root {
     align-items: center;
-    min-height: 100vh;
+    min-width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: #007AFF;
     justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 .input {
@@ -23,6 +35,7 @@
 }
 
 .title {
+    margin-bottom: 30px;
     font-size: 35px;
     padding: 30px;
     text-align: center;
@@ -30,4 +43,28 @@
 
 .loginButton {
     display: flex;
+    justify-content: center;
 }
+
+.alertHidden {
+    position: absolute;
+    top: -100px;
+    box-sizing: border-box;
+    width: 90vw;
+    transition: top 1s ease-in-out;
+}
+
+.alertShown {
+    position: absolute;
+    top: 30px;
+    box-sizing: border-box;
+    width: 90vw;
+    transition: top 1s ease-in-out;
+}
+
+.linkButtons {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+

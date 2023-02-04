@@ -5,27 +5,43 @@ import { Link } from 'react-router-dom'
 
 const AuthPage = () => {
 	const [forgotPasswordAlert, setForgotPasswordAlert] = useState<boolean>(false)
+	const showAlert = () => {
+		setForgotPasswordAlert(true)
+		setTimeout(() => {
+			setForgotPasswordAlert(false)
+		}, 2000)
+	}
 	return (
 		<div className={classes.root}>
 			{
-				forgotPasswordAlert
-					? <Alert message={'Ебать ты лох'} type={'success'} className={classes.alert} />
-					: <></>
+				<Alert
+					showIcon
+					message={'Ебать ты лох'}
+					type={'success'}
+					className={forgotPasswordAlert ? classes.alertShown : classes.alertHidden}
+				/>
+
 			}
 			<form className={classes.form}>
 				<h1 className={classes.title}>Авторизация</h1>
 				<div className={classes.wrapper}>
 					<Input placeholder={'Имя пользователя'} className={classes.input} />
-					<div className={classes.passwordWrapper}>
-						<Input.Password placeholder={'Пароль'} className={classes.input} />
-						<Button onClick={() => {
-							setForgotPasswordAlert(true)
-							setTimeout(() => {
-								setForgotPasswordAlert(false)
-							}, 2000)
-						}} type={'link'}>Забыл пароль</Button>
+					<Input.Password placeholder={'Пароль'} className={classes.input} />
+					<div className={classes.linkButtons}>
+						<Button
+							onClick={showAlert}
+							type={'link'}>Забыл(а) пароль
+						</Button>
+						<Button
+							type={'link'}><Link to={'/register'}>Зарегистрироваться</Link>
+						</Button>
 					</div>
-					<Button className={classes.loginButton} type={'primary'}><Link to={'/feed'}>Войти</Link></Button>
+					<Button
+						className={classes.loginButton}
+						type={'primary'}
+					>
+						<Link to={'/feed'}>Войти</Link>
+					</Button>
 				</div>
 			</form>
 		</div>
