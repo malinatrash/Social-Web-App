@@ -5,7 +5,7 @@ import { Navigate, Route, Routes } from 'react-router'
 import React from 'react'
 import Feed from '../../pages/feed/Feed'
 import LoginForm from '../login/LoginForm'
-import RegisterForm from '../regiter/RegisterForm'
+import RegisterForm from '../register/RegisterForm'
 
 const App = () => {
 	return (

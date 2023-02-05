@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import { Button, Input, message, Upload, UploadFile, UploadProps } from 'antd'
-import classes from '../../pages/auth/AuthPage.module.css'
-import { Link } from 'react-router-dom'
+import { message, Upload, UploadFile, UploadProps } from 'antd'
 import { RcFile, UploadChangeParam } from 'antd/es/upload'
 import { LoadingOutlined, PlusOutlined } from '@ant-design/icons'
+
 
 const getBase64 = (img: RcFile, callback: (url: string) => void) => {
 	const reader = new FileReader()
@@ -23,8 +22,7 @@ const beforeUpload = (file: RcFile) => {
 	return isJpgOrPng && isLt2M
 }
 
-const RegisterForm = () => {
-
+const Uploader = () => {
 	const [loading, setLoading] = useState(false)
 	const [imageUrl, setImageUrl] = useState<string>()
 
@@ -49,40 +47,19 @@ const RegisterForm = () => {
 		</div>
 	)
 
-
 	return (
-
-		<form className={classes.form}>
-			<h1 className={classes.title}>Регистрация</h1>
-			<div className={classes.wrapper}>
-				<div style={{ display: 'flex' }}>
-					<Input placeholder={'Имя'} className={classes.input} />
-					<Input placeholder={'Фамилия'} className={classes.input} />
-				</div>
-				<Input placeholder={'Имя пользователя'} className={classes.input} />
-				<Input.Password placeholder={'Пароль'} className={classes.input} />
-
-				<Upload
-					name='avatar'
-					listType='picture-card'
-					className='avatar-uploader'
-					showUploadList={false}
-					action='https://www.mocky.io/v2/5cc8019d300000980a055e76'
-					beforeUpload={beforeUpload}
-					onChange={handleChange}
-				>
-					{imageUrl ? <img src={imageUrl} alt='avatar' style={{ width: '100%' }} /> : uploadButton}
-				</Upload>
-
-				<Button
-					className={classes.loginButton}
-					type={'primary'}
-				>
-					<Link to={'/feed'}>Зарегистрироватся</Link>
-				</Button>
-			</div>
-		</form>
+		<Upload
+			name='avatar'
+			listType='picture-card'
+			className='avatar-uploader'
+			showUploadList={false}
+			action='https://www.mocky.io/v2/5cc8019d300000980a055e76'
+			beforeUpload={beforeUpload}
+			onChange={handleChange}
+		>
+			{imageUrl ? <img src={imageUrl} alt='avatar' style={{ width: '100%' }} /> : uploadButton}
+		</Upload>
 	)
 }
 
-export default RegisterForm
+export default Uploader

@@ -1,74 +1,73 @@
 .form {
-    padding: 50px;
-    background-color: whitesmoke;
-    border-radius: 30px;
-    width: 450px;
-    height: 550px;
-    max-height: 450px;
+	padding: 50px;
+	background-color: whitesmoke;
+	border-radius: 30px;
+	width: 450px;
+	height: 550px;
+	max-height: 450px;
 }
 
 @media (max-width: 800px) {
-    .form {
-        width: 66vw;
-        height: 70vh;
-    }
+	.form {
+		width: 66vw;
+		height: 70vh;
+	}
 }
 
 .root {
-    align-items: center;
-    min-width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #007AFF;
-    justify-content: center;
+	align-items: center;
+	min-width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: #007aff;
+	justify-content: center;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .input {
-    height: initial;
-    margin-bottom: 20px;
-    margin-left: 2px;
-    margin-right: 2px;
+	height: initial;
+	margin-bottom: 20px;
+	margin-left: 2px;
+	margin-right: 2px;
 }
 
 .title {
-    margin-bottom: 30px;
-    font-size: 35px;
-    padding: 30px;
-    text-align: center;
+	margin-bottom: 30px;
+	font-size: 35px;
+	padding: 30px;
+	text-align: center;
 }
 
 .loginButton {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .alertHidden {
-    position: absolute;
-    top: -100px;
-    box-sizing: border-box;
-    width: 90vw;
-    transition: top 1s ease-in-out;
+	position: absolute;
+	top: -100px;
+	box-sizing: border-box;
+	transition: top 1s ease-in-out;
+	right: 70px;
+	left: 70px;
 }
 
 .alertShown {
-    position: absolute;
-    top: 30px;
-    box-sizing: border-box;
-    width: 90vw;
-    transition: top 1s ease-in-out;
+	position: absolute;
+	top: 30px;
+	box-sizing: border-box;
+	transition: top 1s ease-in-out;
+	right: 70px;
+	left: 70px;
 }
 
 .linkButtons {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 50px;
 }
-
-
-
