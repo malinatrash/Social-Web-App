@@ -6,6 +6,8 @@ import React from 'react'
 import Feed from '../../pages/feed/Feed'
 import LoginForm from '../login/LoginForm'
 import RegisterForm from '../register/RegisterForm'
+import Profile from '../../pages/profile/Profile'
+import { users } from '../../model/IUser'
 
 const App = () => {
 	return (
@@ -34,6 +36,10 @@ const App = () => {
 				<Route
 					path='/*'
 					element={<Navigate to='/error' replace />}
+				/>
+				<Route
+					path='/profile'
+					element={<Profile user={users[0]} />}
 				/>
 				)
 			</Routes>

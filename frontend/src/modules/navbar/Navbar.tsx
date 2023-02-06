@@ -1,8 +1,9 @@
-import React, { FC } from 'react'
-import classes from './navbar.module.css'
-import { Avatar, Button, Tooltip } from 'antd'
 import { UserOutlined } from '@ant-design/icons'
+import { Avatar, Button, Tooltip } from 'antd'
+import { FC } from 'react'
+import { Link } from 'react-router-dom'
 import { IUser } from '../../model/IUser'
+import classes from './navbar.module.css'
 
 interface NavbarProps {
 	user: IUser
@@ -11,14 +12,29 @@ interface NavbarProps {
 const Navbar: FC<NavbarProps> = ({ user }) => {
 	return (
 		<div className={classes.navbar}>
-			<Tooltip title='Нажмите, чтобы перейти в свой профиль' placement='right' className='avatar-wrapper'>
-				<Avatar className={classes.avatar} size={100}
-								src={user.image}
-								icon={<UserOutlined />}
-				/>
-				<span className={classes.username}>{user.username}</span>
+			<Tooltip
+				title='Нажмите, чтобы перейти в свой профиль'
+				placement='right'
+				className='avatar-wrapper'
+			>
+				<Link to='/profile'>
+					<Avatar
+						className={classes.avatar}
+						size={100}
+						src={user.image}
+						icon={<UserOutlined />}
+					/>
+					<span className={classes.username}>{user.username}</span>
+				</Link>
 			</Tooltip>
-			<Button type='primary' size='large' shape='round' className={classes.toListButton}>Главная</Button>
+			<Button
+				type='primary'
+				size='large'
+				shape='round'
+				className={classes.toListButton}
+			>
+				<Link to={'/error'}>Главная</Link>
+			</Button>
 		</div>
 	)
 }
