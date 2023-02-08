@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import classes from '../../pages/auth/AuthPage.module.css'
 import Form from '../form/Form'
+import { getCurrentUser, IUser } from '../../model/IUser'
 
 const RegisterForm = () => {
 	const [name, setName] = useState<string>('')
@@ -11,18 +12,19 @@ const RegisterForm = () => {
 	const [password, setPassword] = useState<string>('')
 
 	const createUser = () => {
-		return {
+		let user: IUser = {
 			username: username,
 			password: password,
 			name: name,
 			surname: surname,
-			image: 'https://picsum.photos/200',
+			image: 'https://picsum.photos/200'
 		}
+		return user
 	}
 
 	const register = () => {
 		let user = createUser()
-		console.log(user)
+		getCurrentUser(user)
 	}
 
 	return (

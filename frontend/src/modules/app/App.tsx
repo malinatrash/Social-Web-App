@@ -7,7 +7,7 @@ import Feed from '../../pages/feed/Feed'
 import LoginForm from '../login/LoginForm'
 import RegisterForm from '../register/RegisterForm'
 import Profile from '../../pages/profile/Profile'
-import { users } from '../../model/IUser'
+import { currentUser } from '../../model/IUser'
 
 const App = () => {
 	return (
@@ -39,7 +39,7 @@ const App = () => {
 				/>
 				<Route
 					path='/profile'
-					element={<Profile user={users[0]} />}
+					element={<Profile user={currentUser} />}
 				/>
 				)
 			</Routes>
