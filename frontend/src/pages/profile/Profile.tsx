@@ -12,7 +12,7 @@ const Profile: FC<ProfileProps> = ({ user }) => {
 	return (
 		<div>
 			<div className={classes.fromWrapper}>
-				<Form title={''}>
+				<Form title={'Profile'}>
 					<h1>{user.name}</h1>
 					<h1>{user.surname}</h1>
 					<h1>{user.age}</h1>
