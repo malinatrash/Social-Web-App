@@ -19,7 +19,7 @@ const LoginForm = () => {
 		<div>
 			<FloatingAlert
 				type={'success'}
-				message={'Ебать ты лох'}
+				message={'Забыл пиздец!'}
 				isHidden={alertHidden}
 			/>
 			<Form title={'Авторизация'}>
