@@ -6,7 +6,7 @@ const Feed = () => {
 	return (
 		<div>
 			<Navbar user={currentUser} />
-			<h1>хуй</h1>
+			<h1>C0mmit check</h1>
 		</div>
 	)
 }

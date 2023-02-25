@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import classes from '../../pages/auth/AuthPage.module.css'
 import { Button, Input } from 'antd'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import Form from '../form/Form'
+import classes from '../../pages/auth/AuthPage.module.css'
 import FloatingAlert from '../alerts/floating/FloatingAlert'
+import Form from '../form/Form'
 
 const LoginForm = () => {
 	const [alertHidden, setAlertHidden] = useState<boolean>(true)
@@ -17,7 +17,11 @@ const LoginForm = () => {
 
 	return (
 		<div>
-			<FloatingAlert type={'success'} message={'Ебать ты лох'} isHidden={alertHidden} />
+			<FloatingAlert
+				type={'success'}
+				message={'Ебать ты лох'}
+				isHidden={alertHidden}
+			/>
 			<Form title={'Авторизация'}>
 				<Input placeholder={'Имя пользователя'} className={classes.input} />
 				<Input.Password placeholder={'Пароль'} className={classes.input} />
